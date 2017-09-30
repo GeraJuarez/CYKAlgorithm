@@ -57,28 +57,14 @@ def cyk_algorithm( word, cyk ):
                 j = i
             for m in cyk[i][j]:
                 for n in cyk[j + 1][k + i]:
-                    print m + n
+                    # print m + n
                     posible_symbols = in_grammar( m + n )
-                    print posible_symbols
+                    # print posible_symbols
                     tempList = list( set(tempList) | set(posible_symbols) )
-                    print tempList
-            if tempList:
+                    # print tempList
+            if posible_symbols:
                 cyk[i][k + i] = tempList
             j += 1
-"""
-for k in range(1, 6):
-    i = 0
-    j = 0
-    print "============"
-    while j < 6 - 1:
-        if j == k + i:
-            i += 1
-            j = i
-        print str(i) + " : " + str(j) + "\t"
-        print str(j + 1) + " : " + str(k + i)
-        print "--------------"
-        j += 1
-"""
 
 """ Main """
 n = raw_input("Insert number of Non-terminal Symbols of the CFG: ")
