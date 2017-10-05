@@ -57,11 +57,8 @@ def cyk_algorithm( word, cyk ):
                 j = i
             for m in cyk[i][j]:
                 for n in cyk[j + 1][k + i]:
-                    # print m + n
                     posible_symbols = in_grammar( m + n )
-                    # print posible_symbols
                     tempList = list( set(tempList) | set(posible_symbols) )
-                    # print tempList
             if posible_symbols:
                 cyk[i][k + i] = tempList
             j += 1
