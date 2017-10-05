@@ -20,7 +20,7 @@ def print_grammar( cfg ):
     print "==========\n"
     for k in cfg.keys():
         print k + " -> " + "|".join (cfg[k] )
-    print "\n=========="
+    print "\n========= ="
 
 def in_grammar( letter ):
     """ Check whether the letter can be obtained by a non terminal symbol """
